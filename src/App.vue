@@ -3,7 +3,7 @@
     <div v-for="(channel, channelName) in channels" :key="channelName">
       <ChannelComponent :channel="channel"/>
     </div>
-    <button v-on:click="addNamse">Add Namse Channel!!</button>
+    <button v-on:click="openAddChannelDialog">채널 추가</button>
   </div>
 </template>
 
@@ -20,8 +20,13 @@ import ChannelManager from "./ChannelManager";
 export default class App extends Vue {
   channelManager: ChannelManager = new ChannelManager();
   channels: Channel[] = this.channelManager.channels;
-  addNamse() {
-    this.channelManager.addChannel("namse_");
+
+  openAddChannelDialog() {
+    const channelName = prompt("스트리머의 영문 ID", "namse_");
+    if (!channelName) {
+      return;
+    }
+    this.channelManager.addChannel(channelName);
   }
 }
 </script>
