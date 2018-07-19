@@ -1,6 +1,6 @@
 <template>
   <div class="chat">
-    {{chat.username}}: {{chat.content}}
+    <span class="username" v-bind:style="{ color: chat.color }">{{chat.username}}</span> : {{chat.content}}
   </div>
 </template>
 
@@ -17,5 +17,10 @@ export default class ChatComponent extends Vue {
 <style scoped>
 .chat {
   font-size: 12px;
+  line-height: 20px;
+}
+.username {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
 }
 </style>

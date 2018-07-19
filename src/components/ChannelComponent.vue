@@ -1,7 +1,7 @@
 <template>
   <div class="channel">
     <div>{{channel.channelName}}님의 채널</div>
-    <div ref="chats" class ="chats">
+    <div ref="chats" class ="chats" v-bind:style="{ height: `${channelHeight}px` }">
       <div v-for="(chat, index) in channel.chats" :key="index">
         <ChatComponent :chat="chat"/>
       </div>
@@ -20,6 +20,7 @@ import ChatComponent from "./ChatComponent.vue";
 })
 export default class ChannelComponent extends Vue {
   @Prop() private channel!: Channel;
+  @Prop() private channelHeight!: number;
 
   $refs: {
     chats: HTMLElement;
