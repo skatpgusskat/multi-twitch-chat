@@ -2,10 +2,13 @@
   "name": "multi-twitch-chat",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "electron .",
+    "package": "electron-packager . multi-twitch-chat --overwrite"
   },
   "dependencies": {
     "vue": "^2.5.16",
@@ -16,6 +19,8 @@
     "@vue/cli-plugin-babel": "^3.0.0-rc.5",
     "@vue/cli-plugin-typescript": "^3.0.0-rc.5",
     "@vue/cli-service": "^3.0.0-rc.5",
+    "electron": "^2.0.5",
+    "electron-packager": "^12.1.0",
     "vue-template-compiler": "^2.5.16"
   }
 }
