@@ -19,7 +19,7 @@
     "@vue/cli-plugin-babel": "^3.0.0-rc.5",
     "@vue/cli-plugin-typescript": "^3.0.0-rc.5",
     "@vue/cli-service": "^3.0.0-rc.5",
-    "electron": "^2.0.5",
+    "electron": "^9.4.0",
     "electron-packager": "^12.1.0",
     "vue-template-compiler": "^2.5.16"
   }
